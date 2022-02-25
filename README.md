@@ -1,5 +1,7 @@
 
 # Pokedex
 ### *Um Projeto React com intuito de consumir uma API e exibir em tela*
-![img of project](https://user-images.githubusercontent.com/74004642/155817585-7bcf0577-6f59-415e-bc31-456510df82bb.mp4)
+![pokemon giff](https://user-images.githubusercontent.com/74004642/155817784-6b4f0d2f-2954-41d0-9031-e20e7c30a35a.gif)
+
+
 > Para conferir o projeto clique [aqui.](https://lucascurty.github.io/pokedex/) 
