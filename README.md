@@ -3,6 +3,7 @@
     
 
 
+
 <h3 align="center"><em>Um Projeto React com intuito de consumir uma API e exibir em tela.</em></h3>
 <br>
 
@@ -21,5 +22,3 @@
 | <em>Caso queira entrar em contato para alguma informação ou me ajudar de alguma forma, minhas redes estao em meu perfil. Agradeço o interesse.</em>
 <br>
  <p>Para conferir o projeto clique <a href="https://lucascurty.github.io/pokedex/">aqui.</a> </p>
-
- 
