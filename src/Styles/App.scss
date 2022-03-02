@@ -12,6 +12,7 @@
   --box-shadow: 1px 1px 7px 3px rgba(0, 0, 0, 10%);
   --border-radius: 15px;
 }
+
 .App{
     max-width: 1200px;
     height: 100%;
@@ -135,6 +136,11 @@
     text-transform: capitalize;
     text-align: center;
     margin-top: 2rem;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 1rem;
+    border-radius: 20px 5px;
+    color: white;
   }
   .pokemonview{
     display: grid;
@@ -165,9 +171,7 @@
       text-transform: capitalize;
       margin: 0.8rem 0.5rem;
     }
-    span{
-       background-color: rgba(128, 128, 128, 0.349);
-    }
+    
     .abilityPoke{
       list-style: none;      
       li{
@@ -184,6 +188,51 @@
       width: 100%; 
       list-style-type: none;
     }
+  }
+  span{
+    padding: 2px;
+    border-radius: 4px;
+    color: white;
+  }
+  .grass{
+    background-color: #85C125;
+  }
+  .fire{
+    background-color: #FB151F;
+  }
+  .water{
+    background-color: #2D3192;
+  }
+  .bug{
+    background-color: #d1971a;
+  }
+  .poison{
+    background-color: #741F7C;
+  }
+  .normal{
+    background-color: #563317;
+  }
+  .electric{
+    background-color: #d3d31b;
+    color: rgb(49, 49, 49);
+  }
+  .ground{
+    background-color: #D46828;
+  }
+  .fairy{
+    background-color: #FE1F70;
+  }
+  .psychic{
+    background-color: #044318;
+  }
+  .dragon{
+    background-color: #FC6D21;
+  }
+  .rock{
+    background-color: #5D6162;
+  }
+  .flying{
+    background-color: #79DAFD;
   }
 }
 @media (max-width: 688px) {

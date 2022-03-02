@@ -10,7 +10,7 @@ export default function View(){
         fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then((resdoServidor)=>resdoServidor.json())
         .then((resEmObjeto)=>
-        setPokemon(resEmObjeto));
+        setPokemon(resEmObjeto,console.log(resEmObjeto)));
         },[name]);
         
         if(!pokemon){
@@ -23,28 +23,30 @@ export default function View(){
                 <Link to="/list"> Back to List </Link>
             </nav>
 
-                <h1 id="pokemonName">{pokemon.name}</h1>
+                <h1 id="pokemonName" className={pokemon.types[0].type.name}>{pokemon.name}</h1>
                 <section className="pokemonview">
                 
                     <div className="pokeInfo">
                         <h1 className="poke_H1">Informations</h1>
                         <ul>
-                            <p className="listP"><span>Type:</span>
+                            <p className="listP"><span className={pokemon.types[0].type.name}>Type:</span>
                                 {pokemon.types.map((poketype, index)=>
                                 <li key={index}>
+                                    <span className={poketype.type.name}>
                                 {poketype.type.name}
+                                    </span>
                                 </li>)}
                             </p>
                         </ul>
 
-                        <p className="listP"><span>Weight:</span> {pokemon.weight /10}kg</p>
-                        <p className="listP"><span>Height:</span> {pokemon.height / 10}m</p>
+                        <p className="listP"><span className={pokemon.types[0].type.name}>Weight:</span> {pokemon.weight /10}kg</p>
+                        <p className="listP"><span className={pokemon.types[0].type.name}>Height:</span> {pokemon.height / 10}m</p>
 
                         <ul className="abilityPoke">
                             <h1 className="poke_H1">Abilities</h1>
                                 {pokemon.abilities.map((habvalue,index)=>
                                 <li key={index}>
-                                {habvalue.ability.name}
+                                    <span className={pokemon.types[0].type.name}>{habvalue.ability.name}</span>
                                 </li>)}
                         </ul>
                     </div>
@@ -59,12 +61,12 @@ export default function View(){
                         
                         {pokemon.stats.map((pokeStats, index)=>
                             <li key={index} className="listP">
-                                <span>{pokeStats.stat.name}:</span> {pokeStats.base_stat}
+                                <span className={pokemon.types[0].type.name}>{pokeStats.stat.name}:</span> {pokeStats.base_stat}
                             </li>)}
                     </div>
                 </section>
+                
         </div>
     )
     
-  
 }
