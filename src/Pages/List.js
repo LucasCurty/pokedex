@@ -26,16 +26,18 @@ export default function List(){
             <div className="pokeball">
                 <div className="pokeball__button"></div>
             </div>
+
+            
             <ul>
             {pokemons.map((pokemon, index)=>(
                 <Link key={index} to={`/view/${pokemon.pokemon_species.name}`}>
                     <li key={pokemon.entry_number}>
-                        {pokemon.pokemon_species.name}                      
+                        {pokemon.pokemon_species.name}
                     </li>
                 </Link>
+                              
             ))} 
-            </ul>  
-            
+            </ul>      
         </div>
     )
 }

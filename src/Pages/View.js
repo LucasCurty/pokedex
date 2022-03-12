@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom";
 
+// import of swiper 
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+
 
 export default function View(){
     const [pokemon, setPokemon] = useState(null);
@@ -10,7 +14,7 @@ export default function View(){
         fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then((resdoServidor)=>resdoServidor.json())
         .then((resEmObjeto)=>
-        setPokemon(resEmObjeto,console.log(resEmObjeto)));
+        setPokemon(resEmObjeto));
         },[name]);
         
         if(!pokemon){
@@ -21,8 +25,7 @@ export default function View(){
         <div className="View">
             <nav>
                 <Link to="/list"> Back to List </Link>
-            </nav>
-
+            </nav> 
                 <h1 id="pokemonName" className={pokemon.types[0].type.name}>{pokemon.name}</h1>
                 <section className="pokemonview">
                 
