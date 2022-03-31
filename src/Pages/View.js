@@ -10,7 +10,7 @@ export default function View(){
         fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then((resdoServidor)=>resdoServidor.json())
         .then((resEmObjeto)=>
-        setPokemon(resEmObjeto,console.log(resEmObjeto)));
+        setPokemon(resEmObjeto));
         },[name]);
         
         if(!pokemon){
