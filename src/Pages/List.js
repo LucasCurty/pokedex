@@ -14,7 +14,6 @@ export default function List(){
         })
     },[])
 
-
     if(!pokemons){
         return null
     }

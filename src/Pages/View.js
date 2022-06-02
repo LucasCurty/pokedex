@@ -20,6 +20,7 @@ export default function View(){
         if(!pokemon){
             return null;
         };
+        console.log(pokemon)
 
     return(
         <div className="View">
