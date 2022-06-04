@@ -13,11 +13,11 @@ export default function List(){
             setPokemons(resEmObj.pokemon_entries)
         })
     },[])
+    console.log(pokemons)
 
     if(!pokemons){
         return null
     }
-
     return(
         <div className="List">
             <h1>Your pokemon list</h1>
@@ -29,7 +29,7 @@ export default function List(){
             
             <ul>
             {pokemons.map((pokemon, index)=>(
-                <Link key={index} to={`/view/${pokemon.pokemon_species.name}`}>
+                <Link key={index} to={`/view/${pokemon.entry_number}`}>
                     <li key={pokemon.entry_number}>
                         {pokemon.pokemon_species.name}
                     </li>

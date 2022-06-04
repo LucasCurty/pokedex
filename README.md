@@ -4,7 +4,7 @@
     
 <div align="center">
     <img src="https://user-images.githubusercontent.com/74004642/155817784-6b4f0d2f-2954-41d0-9031-e20e7c30a35a.gif"></img>
-    <p>Para conferir o projeto clique <a href="https://lucascurty.github.io/pokedex/">aqui.</a></p>    
+    <p>Para conferir o projeto clique <a href="#">Manutenção</a></p>    
 </div>
 
 <h2>☄️ Tecnologias usadas:</h2>

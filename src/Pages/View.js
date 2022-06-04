@@ -10,26 +10,33 @@ export default function View(){
     const [pokemon, setPokemon] = useState(null);
     const {name} = useParams();
     
+    
     useEffect(()=>{
         fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then((resdoServidor)=>resdoServidor.json())
-        .then((resEmObjeto)=>
-        setPokemon(resEmObjeto));
+        .then((resEmObjeto)=>setPokemon(resEmObjeto))
         },[name]);
         
         if(!pokemon){
             return null;
         };
         console.log(pokemon)
-
-    return(
-        <div className="View">
-            <nav>
-                <Link to="/list"> Back to List </Link>
-            </nav> 
+        return(
+            <section id="View">
+                <nav>
+                    <Link to="/list"> Back to List </Link>
+                </nav> 
                 <h1 id="pokemonName" className={pokemon.types[0].type.name}>{pokemon.name}</h1>
+                <div className="pokes">
+                        <Link to={`/view/${parseInt(name) - 1}`}>Anterior</Link>
+                        <img src={pokemon.sprites.front_default}
+                            alt={name}
+                            /> 
+                        <Link to={`/view/${parseInt(name) + 1}`}>Proximo</Link> 
+                        
+                </div> 
                 <section className="pokemonview">
-                
+
                     <div className="pokeInfo">
                         <h1 className="poke_H1">Informations</h1>
                         <ul>
@@ -54,12 +61,7 @@ export default function View(){
                                 </li>)}
                         </ul>
                     </div>
-               
-                    <img
-                        src={pokemon.sprites.front_default}
-                        alt={name}
-                    /> 
-
+                                        
                     <div className="poke_stats">
                         <h1 className="poke_H1"> Stats</h1>
                         
@@ -70,7 +72,7 @@ export default function View(){
                     </div>
                 </section>
                 
-        </div>
+            </section>
     )
     
 }

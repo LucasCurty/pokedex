@@ -117,7 +117,7 @@
         100% { top: 0 }
       }
 }
-.View{
+#View{
   nav{
     display: inline-flex;
     border: 1px solid;
@@ -132,6 +132,24 @@
       color: white;
     }
   }
+  .pokes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    > img{
+      width: 45vw;
+      max-width: 250px;
+    }
+    > a{
+      font-size: 1rem;
+      text-decoration: none;
+      color: black;
+      border: 1px solid black;
+      border-radius: 3px;
+      padding: .3rem;
+    }
+  }
   #pokemonName{
     text-transform: capitalize;
     text-align: center;
@@ -144,9 +162,7 @@
   }
   .pokemonview{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     .pokeInfo{
       box-shadow: var(--box-shadow);
       border-radius: var(--border-radius);
@@ -158,10 +174,7 @@
         display: inline-flex;
         list-style-type: none;
       }
-    }    
-    img{
-      width: 70%;
-    }    
+    }   
     .poke_H1{
       padding-top: 1rem;  
       font-size: 1rem;
@@ -235,72 +248,57 @@
     background-color: #79DAFD;
   }
 }
-@media (max-width: 688px) {
-  .App{
-    box-shadow: none;
-    margin-bottom: 1rem;
-    margin: 0 auto;
-  }
-  .View{
-    .pokemonview{
-      display: grid;
-      grid-template-columns: 1fr 1fr ;
-      grid-template-areas: "img img"
-                           "info stats";  
-      .pokeInfo{
-        grid-area: info;
-        width: 100%;
-      }      
-      img{
-        width: 50%;
-        grid-area: img;
-      }      
-      .poke_stats{
-        padding: 1.5rem;
-        grid-area: stats;
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
+// @media (max-width: 688px) {
+//   .App{
+//     box-shadow: none;
+//     margin-bottom: 1rem;
+//     margin: 0 auto;
+//   }
+//   #View{
+//     .pokemonview{
+//       display: grid;
+//       grid-template-columns: 1fr 1fr ;
+//       .pokeInfo{
+//         width: 100%;
+//       }       
+//       .poke_stats{
+//         padding: 1.5rem;
+//         height: 100%;
+//         width: 100%;
+//       }
+//     }
+//   }
   
-}
-@media (max-width: 500px) {
-  .App{
-    box-shadow: none;
-    margin-bottom: 1rem;
-    margin: 0 auto;
-  }
-  .List{
-    ul{
-      grid-template-columns: 1fr;
-    }
-  }
-  .View{
-    .pokemonview{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "img img "
-                          "info stats";  
-      .pokeInfo{
-        grid-area: info;
-        height: 100%;
-        margin-right: 1rem;
-        li{
-          display: block;
-          margin: 5px 0;
-        }
-      }      
-      img{
-        width: 80%;
-        grid-area: img;
-      }      
-      .poke_stats{
-        padding: 1.5rem;
-        margin-left: 1rem;
-        grid-area: stats;
-        height: 100%;
-      }
-    }
-  }  
-}
+// }
+// @media (max-width: 500px) {
+//   .App{
+//     box-shadow: none;
+//     margin-bottom: 1rem;
+//     margin: 0 auto;
+//   }
+//   .List{
+//     ul{
+//       grid-template-columns: 1fr;
+//     }
+//   }
+//   #View{
+//     .pokemonview{
+//       display: grid;
+//       grid-template-columns: 1fr 1fr;
+//       .pokeInfo{
+//         height: 100%;
+//         margin-right: 1rem;
+//         li{
+//           display: block;
+//           margin: 5px 0;
+//         }
+//       }      
+           
+//       .poke_stats{
+//         padding: 1.5rem;
+//         margin-left: 1rem;
+//         height: 100%;
+//       }
+//     }
+//   }  
+// }
