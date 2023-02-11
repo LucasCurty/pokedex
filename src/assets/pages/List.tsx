@@ -15,7 +15,13 @@ useEffect(()=>{
   return (
     <section className="w-10/12 m-auto">
       <div className="flex items-center justify-center ">
-        <h1 className="text-5xl text-white">Pokedex</h1>
+        <h1 className="text-5xl text-white f">
+          P
+          <img className="w-10 inline" 
+            src="https://cdn-icons-png.flaticon.com/512/287/287221.png" 
+            alt="icone pokebola" />
+          kedex
+          </h1> 
         <img src="https://64.media.tumblr.com/04bbb6a44e6ac6c9f5d6cddf308d1b5a/tumblr_mr323otPd81rfjowdo1_500.gif" 
         alt="imagem pokedex"
         className="w-32 m-2 animate-pulse	" />
