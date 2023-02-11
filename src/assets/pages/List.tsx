@@ -11,7 +11,7 @@ useEffect(()=>{
   .then(res => setPokemonList(res.pokemon_entries))
 },[])
 
-{console.log(pokemonList)}
+
   return (
     <section className="w-10/12 m-auto">
       <div className="flex items-center justify-center ">
