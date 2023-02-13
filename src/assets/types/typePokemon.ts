@@ -7,9 +7,13 @@ export type pokemonName = {
 
 export type PokemonStats = {
   name: string;
-  abilities: [{
-    name: string;
-  }]
+  abilities:[
+    {
+      ability:{
+        name: string
+      }
+    }
+  ]
   sprites:{
     other:{
       'official-artwork':{
