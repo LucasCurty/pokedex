@@ -14,34 +14,32 @@ function Pokemon(){
 {console.log(pokemon)}
     return(
       <section className="w-screen ">
-        <main className="flex h-96 capitalize w-4/5	 justify-center m-auto items-center">
-
-          <ul className="shrink">
-            <strong>Habilidades</strong>
-            {pokemon?.abilities.map(item => <li>{item.ability.name}</li>)}
-            <div>
-              <strong>Type</strong>
-              <ul>
-                {pokemon?.types.map(item => 
-                  <li>{item.type.name}</li>
-                  )}
-              </ul>
-            </div>
-          </ul>
-          <div className="shrink-0">
-            <h1 className="text-xl text-white text-center ">{pokemon?.name}</h1>
+        <main className="pokemon">
+          <div>
+            <h1 className="title">{pokemon?.name}</h1>
             <img src={pokemon?.sprites.other["official-artwork"].front_default} 
               alt="Pokemon imagem" 
               className="w-64"  
               />
           </div>
-          <ul className="shrink">
-            <strong className="">Status</strong>
-            {
-              pokemon?.stats.map(item => 
+          <ul className="habilidades">
+            <p className=" font-bold">Habilidades</p>
+            {pokemon?.abilities.map(item => <li>{item.ability.name}</li>)}
+            
+            <p className="pt-3 font-bold">Type</p>
+            {pokemon?.types.map(item =>
+              <li className={item.type.name}>
+                {item.type.name}
+              </li>
+            )}
+             
+          </ul>
+          <ul className="status">
+            <strong>Status</strong>
+            {pokemon?.stats.map(item => 
                 <li>
                   <strong>{item.stat.name}</strong>
-                  <span className="" >{item.base_stat}</span>
+                  <span>: {item.base_stat}</span>
                 </li>)
             }
           </ul>

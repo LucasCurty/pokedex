@@ -1,0 +1,15 @@
+.pokemon{
+  @apply flex h-96 capitalize w-4/5	 justify-between m-auto;
+}
+.title{
+  @apply  text-xl text-white  text-center; 
+}
+.habilidades{
+  @apply flex flex-col justify-center p-3 w-36;
+}
+.status{
+  @apply flex flex-col justify-center p-3;
+}
+.fire{
+  @apply bg-red-600 text-white ;
+}
