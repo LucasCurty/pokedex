@@ -1,15 +1,39 @@
-.pokemon{
-  @apply flex h-96 capitalize w-4/5	 justify-between m-auto;
+.pokemon_Section{
+  @apply w-screen h-screen;
+  @apply flex flex-col justify-center;
 }
-.title{
-  @apply  text-xl text-white  text-center; 
+.pokemon{
+  @apply flex justify-center;
+  @apply m-auto capitalize w-4/5 h-4/5 bg-slate-800;
+  @apply relative;
+}
+.face{
+  @apply flex-auto m-auto;
+  @apply flex flex-col justify-center items-center;
+}
+#title{
+  @apply  text-xl text-white  text-center py-1 px-3 rounded-lg ; 
 }
 .habilidades{
-  @apply flex flex-col justify-center p-3 w-36;
+  @apply flex flex-col flex-1 justify-center gap-2 p-3 w-36; 
 }
 .status{
-  @apply flex flex-col justify-center p-3;
+  @apply flex flex-col flex-1 justify-center gap-2 p-3
 }
-.fire{
-  @apply bg-red-600 text-white ;
+#type{
+  @apply p-1 italic rounded
+}
+.div_bottons{
+  @apply w-2/5 p-1 m-3;
+  @apply flex justify-center;
+  @apply absolute bottom-0;
+}
+.back_to_menu{
+  @apply bg-white text-black p-1 rounded;
+}
+.previous_pokemon{
+  @apply bg-black p-1 rounded mx-5;
+}
+.next_pokemon{
+  @apply bg-black p-1 rounded;
 }

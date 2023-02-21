@@ -1,0 +1,57 @@
+.normal{
+  @apply bg-gray-300 text-black
+}
+.fighting{
+  @apply bg-orange-400
+}
+.flying{
+  @apply bg-cyan-300 text-black
+}
+.poison{
+  @apply bg-pink-700
+}
+.ground{
+  @apply bg-yellow-900
+}
+.rock{
+  @apply bg-gray-700
+}
+.fire{
+  @apply bg-red-600;
+}
+.bug{
+  @apply bg-orange-600 ;
+}
+.ghost{
+  @apply bg-stone-900
+}
+.steel{
+  @apply bg-gray-700
+}
+.water{
+  @apply bg-blue-700
+}
+.grass{
+  @apply bg-green-700
+}
+.electric{
+  @apply bg-yellow-400 text-black
+}
+.psychic{
+  @apply bg-pink-400
+}
+.psychic{
+  @apply bg-indigo-300
+}
+.dragon{
+  @apply bg-yellow-700
+}
+.dark{
+  @apply bg-black
+}
+.fairy{
+  @apply bg-gradient-to-r from-white to-pink-900
+}
+.shadow{
+  @apply bg-gradient-to-r from-slate-400 to-slate-800
+}

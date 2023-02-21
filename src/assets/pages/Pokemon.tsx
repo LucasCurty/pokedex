@@ -13,13 +13,13 @@ function Pokemon(){
     },[name]);
 {console.log(pokemon)}
     return(
-      <section className="w-screen ">
+      <section className="pokemon_Section">
         <main className="pokemon">
-          <div>
-            <h1 className="title">{pokemon?.name}</h1>
+          <div className="face">
+            <h1 id="title" className={pokemon?.types[0].type.name + ' animate-pulse'}>{pokemon?.name}</h1>
             <img src={pokemon?.sprites.other["official-artwork"].front_default} 
               alt="Pokemon imagem" 
-              className="w-64"  
+              className="w-64 m-auto "  
               />
           </div>
           <ul className="habilidades">
@@ -28,8 +28,8 @@ function Pokemon(){
             
             <p className="pt-3 font-bold">Type</p>
             {pokemon?.types.map(item =>
-              <li className={item.type.name}>
-                {item.type.name}
+              <li>
+                <span id="type" className={item.type.name}>{item.type.name}</span>
               </li>
             )}
              
@@ -43,10 +43,12 @@ function Pokemon(){
                 </li>)
             }
           </ul>
+          <div className="div_bottons">
+            <Link to="/" className="back_to_menu">Back</Link>
+            <Link to='/' className="previous_pokemon">Before Pokemon</Link>
+            <Link to="/" className="next_pokemon">Next Pokemon</Link>
+          </div>
         </main>
-        <Link to="/"
-        className="bg-red-700 p-2"
-        >Back</Link>
       </section>
     )
 }
