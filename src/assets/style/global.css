@@ -12,6 +12,6 @@
 }
 
 body{
-  background-color: #0F172A;
+  background-image: linear-gradient(to right, #1e2535, #0F172A, #23345a,#0a101d);
   color: white;
 }

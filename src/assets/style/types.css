@@ -50,8 +50,14 @@
   @apply bg-black
 }
 .fairy{
-  @apply bg-gradient-to-r from-white to-pink-900
+  @apply bg-gradient-to-r from-white to-pink-900;
+  @apply text-black
 }
 .shadow{
-  @apply bg-gradient-to-r from-slate-400 to-slate-800
+  @apply bg-gradient-to-r from-slate-400 to-slate-800;
+  @apply text-black
+}
+.ice{
+  @apply bg-gradient-to-r from-blue-400 to-blue-100;
+  @apply text-black
 }

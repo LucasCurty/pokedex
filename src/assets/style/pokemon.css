@@ -4,7 +4,8 @@
 }
 .pokemon{
   @apply flex justify-center;
-  @apply m-auto capitalize w-4/5 h-4/5 bg-slate-800;
+  @apply m-auto capitalize w-4/5 h-4/5 rounded;
+  @apply backdrop-blur-sm bg-white/10;
   @apply relative;
 }
 .face{
@@ -28,12 +29,15 @@
   @apply flex justify-center;
   @apply absolute bottom-0;
 }
+.all_btn{
+  @apply shadow-lg shadow-gray-800 drop-shadow-xl;
+}
 .back_to_menu{
-  @apply bg-white text-black p-1 rounded;
+  @apply bg-white text-black p-1 rounded px-3;
 }
 .previous_pokemon{
-  @apply bg-black p-1 rounded mx-5;
+  @apply bg-black p-1 rounded mx-5 px-4;
 }
 .next_pokemon{
-  @apply bg-black p-1 rounded;
+  @apply bg-black p-1 rounded px-4;
 }
